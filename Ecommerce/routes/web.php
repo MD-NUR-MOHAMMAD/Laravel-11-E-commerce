@@ -5,6 +5,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/admin', [FrontendController::class, 'admin'])->name('admin');
+
 
 // Route::get('/', function () {
 //     return view('welcome');

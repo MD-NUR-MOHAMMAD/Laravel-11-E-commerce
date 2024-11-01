@@ -10,4 +10,8 @@ class FrontendController extends Controller
     {
         return view('ministore.index');
     }
+    public function admin()
+    {
+        return view('kaiadmin.admin');
+    }
 }
