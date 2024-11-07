@@ -12,6 +12,6 @@ class FrontendController extends Controller
     }
     public function admin()
     {
-        return view('kaiadmin.admin');
+        return view('adminto.admin');
     }
 }
