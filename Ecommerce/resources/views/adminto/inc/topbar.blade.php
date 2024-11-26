@@ -184,12 +184,12 @@
                 href="#" role="button" aria-haspopup="false" aria-expanded="false">
                 <img src="{{ asset('adminto/assets/images/users/user-1.jpg ') }}" alt="user-image" class="rounded-circle">
                 <span class="pro-user-name ms-1">
-                    Nowak <i class="mdi mdi-chevron-down"></i>
+                    {{ Auth::user()->name }}<i class="mdi mdi-chevron-down"></i>
                 </span>
             </a>
             <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
                 <!-- item-->
-                <div class="dropdown-header noti-title">
+                {{-- <div class="dropdown-header noti-title">
                     <h6 class="text-overflow m-0">Welcome !</h6>
                 </div>
 
@@ -205,12 +205,16 @@
                     <span>Lock Screen</span>
                 </a>
 
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div> --}}
 
                 <!-- item-->
-                <a href="auth-logout.html" class="dropdown-item notify-item">
+                <a href="{{ route('logout') }}" class="dropdown-item notify-item">
                     <i class="fe-log-out"></i>
                     <span>Logout</span>
+                </a>
+                <a href="{{ route('home') }}" class="dropdown-item notify-item">
+                    <i class="mdi mdi-power"></i>
+                    <span>Home</span>
                 </a>
 
             </div>

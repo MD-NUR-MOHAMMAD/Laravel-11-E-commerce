@@ -12,7 +12,7 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        //
+        echo "Subcategory Index";
     }
 
     /**
@@ -20,7 +20,8 @@ class SubcategoryController extends Controller
      */
     public function create()
     {
-        //
+        echo "Subcategory Create";
+
     }
 
     /**

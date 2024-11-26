@@ -70,6 +70,34 @@
                                 </li>
                             </ul>
                         </li>
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="{{ route('login') }}">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-4" href="{{ route('register') }}">Registration</a>
+                            </li>
+                        @endguest
+                        @if (Auth::check())
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown">{{ Auth::user()->name }}</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    @if (auth()->user()->roles == 'admin')
+                                        <a href="{{ url('admin/dashboard') }}" class="dropdown-item">Dashboard</a>
+                                    @elseif(auth()->user()->roles == 'vendor')
+                                        <a href="{{ url('vendor/dashboard') }}" class="dropdown-item">Dashboard</a>
+                                    @else
+                                        <a href="{{ route('home') }}" class="dropdown-item">Home</a>
+                                    @endif
+                                    <form action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                        <button type="submit" class="dropdown-item">Logout</button>
+                                    </form>
+                                </div>
+                            </div>
+                        @endif
+
                         <li class="nav-item">
                             <div class="user-items ps-5">
                                 <ul class="d-flex justify-content-end list-unstyled">

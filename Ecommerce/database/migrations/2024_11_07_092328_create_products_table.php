@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('category_id')->unsigned()->nullable();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->bigInteger('subcategory_id')->unsigned()->nullable();
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+            // $table->bigInteger('category_id')->unsigned()->nullable();
+            // $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            // $table->bigInteger('subcategory_id')->unsigned()->nullable();
+            // $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
             //vendor id
-            $table->bigInteger('vendor_id')->unsigned()->nullable();
-            $table->foreign('vendor_id')->references('id')->on('users')->onDelete('cascade');
+            // $table->bigInteger('vendor_id')->unsigned()->nullable();
+            // $table->foreign('vendor_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('brand_id')->nullable();
             $table->string('name');
             $table->string('description');
