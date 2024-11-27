@@ -208,7 +208,7 @@
                 <div class="dropdown-divider"></div> --}}
 
                 <!-- item-->
-                <a href="{{ route('logout') }}" class="dropdown-item notify-item">
+                <a href="#" class="dropdown-item notify-item">
                     <i class="fe-log-out"></i>
                     <span>Logout</span>
                 </a>
