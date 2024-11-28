@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Middleware\Admincheck;
+
+use App\Http\Middleware\AdminMiddleware;
+use App\Http\Middleware\DashboardAuthMiddleware;
 use App\Http\Middleware\VendorMiddleware;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -15,8 +17,9 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias(
             [
-                'admin' =>Admincheck::class,
+                'admin' => AdminMiddleware::class,
                 'vendor' =>VendorMiddleware::class,
+                'dashauth' =>DashboardAuthMiddleware::class,
             ]
         );
     })

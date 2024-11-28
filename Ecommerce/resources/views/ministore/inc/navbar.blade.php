@@ -88,7 +88,7 @@
                                     @elseif(auth()->user()->roles == 'vendor')
                                         <a href="{{ url('vendor/dashboard') }}" class="dropdown-item">Dashboard</a>
                                     @else
-                                        <a href="{{ route('home') }}" class="dropdown-item">Home</a>
+                                        <a href="#" class="dropdown-item">Profile</a>
                                     @endif
                                     <form action="{{ route('logout') }}" method="post">
                                         @csrf
