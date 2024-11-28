@@ -20,11 +20,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('dashauth')->group(function () {
+// Route::middleware('dashauth')->group(function () {
 
-    // Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-    // Route::get('/vendor/dashboard', [VendorDashboardController::class, 'index'])->name('vendor.dashboard');
-});
+//     Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+//     Route::get('/vendor/dashboard', [VendorDashboardController::class, 'index'])->name('vendor.dashboard');
+// });
 
 Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');

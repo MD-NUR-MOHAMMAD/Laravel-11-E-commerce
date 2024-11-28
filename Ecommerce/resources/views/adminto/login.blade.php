@@ -1,4 +1,4 @@
-@extends('adminto.layout.auth', ['title' => 'Job Entry', 'name' => 'dashboard'])
+@extends('adminto.layout.auth', ['title' => 'Ecommerce', 'name' => 'dashboard'])
 
 @section('content')
     <div class="account-pages my-5">

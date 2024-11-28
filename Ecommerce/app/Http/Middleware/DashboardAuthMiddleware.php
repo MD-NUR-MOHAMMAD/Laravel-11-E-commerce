@@ -16,22 +16,20 @@ class DashboardAuthMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    // public function handle(LoginRequest $request, Closure $next): Response
-    // {
-    //     $role = Auth::user()->roles;
-    //     if ($role == 'admin') {
-    //         return redirect()->intended(route('admin.dashboard', absolute: false));
-    //         return $next($request);
-    //     }
-    //     if ($role == 'vendor') {
-    //         return redirect()->intended(route('vendor.dashboard', absolute: false));
-    //         return $next($request);
-    //     }
-    //     if ($role == 'user') {
-    //         return redirect()->intended(route('home', absolute: false));
-    //         return $next($request);
-    //     }
-    //     return redirect()->intended(route('home', absolute: false));
-    // }
+    public function handle(Request $request, Closure $next): Response
+    {
 
+        // return $next($request);
+        // $role = Auth::user()->roles;
+        // if ($role == 'admin') {
+        //     return redirect()->intended(route('admin.dashboard', absolute: false));
+        // }
+        // if ($role == 'vendor') {
+        //     return redirect()->intended(route('vendor.dashboard', absolute: false));
+        // }
+        // if ($role == 'user') {
+        //     return redirect()->intended(route('home', absolute: false));
+        // }
+        return $next($request);
+    }
 }
